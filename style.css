@@ -1,0 +1,110 @@
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.vid-wrap {
+    position: relative;
+    padding-bottom: 56.25%;
+}
+
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    border: solid 10px white;
+}
+
+.grid-5 {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+body {
+    background-color: #000823;
+    color: white;
+    width: 1200px;
+    text-align: center;
+    margin: 0 auto;
+    font-family: sans-serif;
+}
+
+ul {
+    list-style: none;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 1rem 0;
+}
+
+li {
+    padding: 0 1.2rem;
+    /* should probably fill space here instead of const pad */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card h1 {
+    flex-grow: 1;
+}
+
+.card p {
+}
+
+.card img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.banner {
+    margin: 10rem 0;
+}
+
+#creators {
+}
+
+header {
+    background: black;
+    border-radius: 50px;
+}
+
+header img {
+    object-fit: cover;
+    height: 125px;
+    width: 100%;
+}
+
+#hero a {
+    border-radius: 5px;
+    background: red;
+    border: solid 10px red;
+    color: white;
+    margin-right: 2rem;
+    font-weight: bold;
+}
+
+#hero p {
+    margin-bottom: 2rem;
+}
+
+header {
+    margin: 0;
+}
+
+header a {
+    color: white;
+    font-weight: bold;
+}
+
+header h1 {
+    margin: 0rem;
+    padding: 1rem 0;
+}
