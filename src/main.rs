@@ -11,8 +11,10 @@ pub fn head() -> Markup {
             title { "Lost to Time" }
             link rel="stylesheet" href="style.css";
             link rel="icon" href=(LOGO);
+            /*
             script src="/assets/htmx.min.js" { }
             script src="/assets/preload.js" { }
+            */
         }
     }
 }
@@ -64,7 +66,7 @@ fn hero() -> Markup {
         #hero .banner {
             .grid-2 {
                 .vid-wrap {
-                    iframe src="https://www.youtube.com/embed/F79U9fpLYzs?controls=0&autoplay=1&mute=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen {}
+                    iframe src="https://www.youtube.com/embed/F79U9fpLYzs?controls=0&autoplay=1&mute=1&loop=1&playlist=F79U9fpLYzs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen {}
                 }
                 div {
                     h1 { "Lost to Time" }
