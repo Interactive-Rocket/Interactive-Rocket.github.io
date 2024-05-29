@@ -1,13 +1,15 @@
+@font-face {
+    font-family: "pixel";
+    src: url("assets/PublicPixel-E447g.ttf");
+}
+
 :root {
-    --root-bg: url("assets/tex2.png");
-    --bg-size: 200px;
     --logo-color: #000823;
     --text-color: black;
-    --body-width: 1200px;
-    background: var(--root-bg);
-    background-size: var(--bg-size);
+    --body-width: 900px;
+    background-color: black;
     image-rendering: pixelated;
-    background-attachment: fixed;
+    font-family: "pixel";
 }
 
 body {
@@ -15,7 +17,8 @@ body {
     width: var(--body-width);
     text-align: center;
     margin: 0 auto;
-    font-family: sans-serif;
+    font-family: pixel;
+    font-size: 0.8rem;
     background: url("assets/tex1.png");
     background-size: 200px;
     image-rendering: pixelated;
@@ -24,12 +27,20 @@ body {
 img {
 }
 
+.caution-border {
+    border: solid 13px yellow;
+    border-image: url("assets/caution-border.png") 13 repeat;
+    background-image: url("assets/window.png");
+    background-size: 100% 100%;
+    background-color: var(--logo-color);
+    color: white;
+}
+
 .grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    background: url("assets/tex4.jpg");
-    place-items: center;
+    /*background: url("assets/tex2.png");*/
 }
 
 .vid-wrap {
@@ -68,18 +79,24 @@ li {
 .card {
     display: flex;
     flex-direction: column;
+    padding-bottom: 2rem;
 }
 
 .card h1 {
     flex-grow: 1;
+    font-size: 0.7rem;
+    margin: 1rem;
 }
 
 .card p {
+    font-size: 0.5rem;
 }
 
 .card img {
-    width: 100%;
+    width: 70%;
     border-radius: 50%;
+    position: relative;
+    left: 15%;
 }
 
 .banner {

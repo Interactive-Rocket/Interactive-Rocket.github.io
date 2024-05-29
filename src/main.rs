@@ -63,7 +63,7 @@ fn index() -> Markup {
 
 fn hero() -> Markup {
     html! {
-        #hero .banner {
+        #hero .banner .caution-border {
             .grid-2 {
                 .vid-wrap {
                     iframe src="https://www.youtube.com/embed/F79U9fpLYzs?controls=0&autoplay=1&mute=1&loop=1&playlist=F79U9fpLYzs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen {}
@@ -73,7 +73,7 @@ fn hero() -> Markup {
                     p { "In Lost to Time you play as a scientist discovering your own time-rewinding powers. Use the powers to solve puzzles, save your daughter, and escape the facility you are held in." }
                     p {
                         a href="https://davidcode.itch.io/losttotime" target="_blank" { "Try the demo!" }
-                        "Or scroll to read more..."
+                        "Or scroll on..."
                     }
                 }
             }
@@ -87,34 +87,34 @@ fn creators() -> Markup {
             h1 { "Creators" }
             p { "These descriptions should be way longer and more accurate! I just put some random stuff for now!" }
             .grid-5 {
-                .card {
+                .card .caution-border {
                     h1 { "David Giraldo" }
                     img src="https://avatars.githubusercontent.com/u/147272329";
-                    p { "Level Designer" }
+                    p { "Group Leader & Level Designer" }
                     a href="https://github.com/DavidGiraldoCode" target="_blank" { "GitHub" }
                 }
-                .card {
+                .card .caution-border {
                     h1 { "Samuel Söderberg" }
                     img src="https://avatars.githubusercontent.com/u/22292096";
                     p { "Visual Effects Programmer" }
                     a href="https://github.com/sasoder" target="_blank" { "GitHub" }
                 }
-                .card {
+                .card .caution-border {
                     h1 { "NooN" }
                     img src="https://avatars.githubusercontent.com/u/14049705";
-                    p { "Lead Programmer" }
+                    p { "Lead Programmer tbh" }
                     a href="https://github.com/noon-io" target="_blank" { "GitHub" }
                 }
-                .card {
+                .card .caution-border {
                     h1 { "Håvard Alstadheim" }
                     img src="https://avatars.githubusercontent.com/u/56519858";
                     p { "Lead Winner & Most Swaggy" }
                     a href="https://github.com/haval0" target="_blank" { "GitHub" }
                 }
-                .card {
+                .card .caution-border {
                     h1 { "ErzaDuNord" }
                     img src="https://avatars.githubusercontent.com/u/102242407";
-                    p { "Godlike Programmer" }
+                    p { "Godlike Legendary Programmer" }
                     a href="https://github.com/ErzaDuNord" target="_blank" { "GitHub" }
                 }
             }
