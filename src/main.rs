@@ -25,11 +25,11 @@ pub fn header() -> Markup {
             nav preload hx-boost="true" {
                 img src=(LOGO) alt="Lost to time";
                 ul.grid-5 {
-                    li { a href="#art" class="button" { "Art" } }
                     li { a href="#creators" class="button" { "Creators" } }
+                    li { a href="#art" class="button" { "Art" } }
                     li { a href="#tech" class="button" { "Tech" } }
                     li { a href="#roadmap" class="button" { "Roadmap" } }
-                    li { a href="#story" class="button" { "Story" } }
+                    //li { a href="#story" class="button" { "Story" } }
                 }
             }
         }
@@ -66,7 +66,7 @@ fn hero() -> Markup {
         #hero .banner .caution-border {
             .grid-2 {
                 .vid-wrap {
-                    iframe src="https://www.youtube.com/embed/F79U9fpLYzs?controls=0&autoplay=1&mute=1&loop=1&playlist=F79U9fpLYzs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen {}
+                    iframe src="https://www.youtube.com/embed/IN2wRIxQKzE?controls=0&autoplay=1&mute=1&loop=1&playlist=IN2wRIxQKzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen {}
                 }
                 div {
                     h1 { "Lost to Time" }
@@ -84,40 +84,134 @@ fn hero() -> Markup {
 fn creators() -> Markup {
     html! {
         #creators .banner {
-            h1 { "Creators" }
-            p { "These descriptions should be way longer and more accurate! I just put some random stuff for now!" }
-            .grid-5 {
+            .creators-grid {
+                #creators-desc {
+                    h1 { "CREATORS" }
+                }
                 .card .caution-border {
                     h1 { "David Giraldo" }
                     img src="https://avatars.githubusercontent.com/u/147272329";
-                    p { "Group Leader & Level Designer" }
+                    ul { 
+                        li { "LEAN development" }
+                        li { "Diegetic UI" }
+                        li { "Targeted rewind" }
+                        li { "Git flow" }
+                        li { "Level design" }
+                        li { "." } //lazy fix for aligment issue (pad all cards to equal number of
+                                   //points)
+                    }
                     a href="https://github.com/DavidGiraldoCode" target="_blank" { "GitHub" }
                 }
-                .card .caution-border {
+.card .caution-border {
                     h1 { "Samuel Söderberg" }
                     img src="https://avatars.githubusercontent.com/u/22292096";
-                    p { "Visual Effects Programmer" }
+                    ul {
+                        li { "Game concept" }
+                        li { "Sound design" }
+                        li { "Object selection logic" }
+                        li { "Visual effects" }
+                        li { "Trailer & logo" }
+                        li { "Level concepts" }
+                    }
                     a href="https://github.com/sasoder" target="_blank" { "GitHub" }
                 }
                 .card .caution-border {
                     h1 { "NooN" }
                     img src="https://avatars.githubusercontent.com/u/14049705";
-                    p { "Lead Programmer tbh" }
+                    ul {
+                        li { "Software architecture" }
+                        li { "Time-keeping system" }
+                        li { "Interaction system" }
+                        li { "UI/HUD system" }
+                        li { "🦭" }
+                        li { "." }
+                    }
                     a href="https://github.com/noon-io" target="_blank" { "GitHub" }
                 }
                 .card .caution-border {
                     h1 { "Håvard Alstadheim" }
                     img src="https://avatars.githubusercontent.com/u/56519858";
-                    p { "Lead Winner & Most Swaggy" }
+                    ul {
+                        li { "Grabbing system" }
+                        li { "Website" }
+                        li { "Hatch system" }
+                        li { "Hatch animation" }
+                        li { "." }
+                        li { "." }
+                    }
                     a href="https://github.com/haval0" target="_blank" { "GitHub" }
                 }
                 .card .caution-border {
                     h1 { "ErzaDuNord" }
                     img src="https://avatars.githubusercontent.com/u/102242407";
-                    p { "Godlike Legendary Programmer" }
+                    ul {
+                        li { "SFX system" }
+                        li { "Conveyor belts" }
+                        li { "Object (de)spawning" }
+                        li { "Playtesting & QA" }
+                        li { "." }
+                        li { "." }
+                    }
                     a href="https://github.com/ErzaDuNord" target="_blank" { "GitHub" }
                 }
             }
+        }
+    }
+}
+
+fn art() -> Markup {
+    html! {
+        #art .banner .caution-border {
+            .grid-2 {
+                .card {
+                    h1 { "Art" }
+                    p { "Lost to Time has a very thoroughly executed PSX-like art style." }
+                    p { "We use low-poly models and low-resolution textures to evoke the sense of 90s/00s games we are inspired by, such as Half Life or Portal." }
+                    p { "We are also exploring various shaders with effects such as dithering that may help create a sense of playing on a classic CRT monitor." }
+                }
+                #art-showcase {
+                    div {
+                    img src="assets/scr1.png";
+                    img src="assets/prop1.png";
+                    img src="assets/scr2.png";
+                    img src="assets/scr3.png";
+                    img src="assets/prop2.png";
+                    }
+                    div {
+                    img src="assets/scr4.png";
+                    img src="assets/prop3.png";
+                    img src="assets/scr5.png";
+                    img src="assets/scr6.png";
+                    }
+                    div {
+                    img src="assets/prop4.png";
+                    img src="assets/prop5.png";
+                    img src="assets/prop6.png";
+                    img src="assets/scr7.png";
+                    }
+                }
+            }
+        }
+    }
+}
+
+fn tech() -> Markup {
+    html! {
+        #tech .banner .caution-border {
+            h1 { "Tech" }
+            h2 { "Tools" }
+            p { "The game is created in Unity and programmed in C#. We use several advanced features and extentions to Unity such as ProBuilder and URP." }
+            h2 { "Systems" }
+            p { "The game itself is built on several sophisticated systems. Handling the storing of time and rewinding objects through time and space requires careful consideration. The grabbing system also turned out to demand more nuance and thought than expected, in order to fit our specific requirements." }
+        }
+    }
+}
+
+fn roadmap() -> Markup {
+    html! {
+        #roadmap .banner .caution-border {
+            h1 { "Roadmap" }
+            p { "The game is planned to launch in early access on Steam. The current Demo represents part of the first chapter of the game. Future chapters will introduce more of the story, and new gameplay mechanics, making for new and exciting puzzle scenarios." }
         }
     }
 }
@@ -126,6 +220,9 @@ fn content() -> Markup {
     html! {
         (hero())
         (creators())
+        (art())
+        (tech())
+        (roadmap())
     }
 }
 

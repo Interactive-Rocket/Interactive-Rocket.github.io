@@ -1,6 +1,8 @@
 @font-face {
-    font-family: "pixel";
-    src: url("assets/PublicPixel-E447g.ttf");
+    font-family: 'Macula Solid';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Macula Solid'), url('assets/Macula Solid.woff') format('woff');
 }
 
 :root {
@@ -9,7 +11,7 @@
     --body-width: 900px;
     background-color: black;
     image-rendering: pixelated;
-    font-family: "pixel";
+    font-family: "Macula Solid";
 }
 
 body {
@@ -17,7 +19,7 @@ body {
     width: var(--body-width);
     text-align: center;
     margin: 0 auto;
-    font-family: pixel;
+    font-family: "Macula Solid";
     font-size: 0.8rem;
     background: url("assets/tex1.png");
     background-size: 200px;
@@ -32,7 +34,7 @@ img {
     border-image: url("assets/caution-border.png") 13 repeat;
     background-image: url("assets/window.png");
     background-size: 100% 100%;
-    background-color: var(--logo-color);
+    background-color: black;
     color: white;
 }
 
@@ -56,17 +58,28 @@ iframe {
     height: 100%;
 }
 
-.grid-5 {
+.creators-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 10px;
 }
 
+#creators-desc {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff30;
+}
 
-ul {
-    list-style: none;
+nav ul {
     display: inline-flex;
     flex-wrap: wrap;
+}
+ul {
+    list-style: none;
     margin: 0;
     padding: 1rem 0;
 }
@@ -84,12 +97,11 @@ li {
 
 .card h1 {
     flex-grow: 1;
-    font-size: 0.7rem;
+    font-size: 1.5rem;
     margin: 1rem;
 }
 
-.card p {
-    font-size: 0.5rem;
+.card ul {
 }
 
 .card img {
@@ -108,19 +120,19 @@ li {
 
 header {
     background: black;
-    border-radius: 50px;
+    border-radius: 0 0 50px 50px;
 }
 
 header img {
-    object-fit: cover;
+    object-fit: contain;
     height: 125px;
     width: 100%;
 }
 
 #hero a {
     border-radius: 5px;
-    background: red;
-    border: solid 10px red;
+    background: #816328;
+    border: solid 10px #816328;
     color: white;
     margin-right: 2rem;
     font-weight: bold;
@@ -144,4 +156,15 @@ header h1 {
     padding: 1rem 0;
 }
 
+#art-showcase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
 
+#art-showcase img {
+    width: 100%;
+}
+
+#art .card {
+    margin: 4rem;
+}
