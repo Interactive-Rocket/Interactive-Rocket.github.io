@@ -84,10 +84,9 @@ fn hero() -> Markup {
 fn creators() -> Markup {
     html! {
         #creators .banner {
-            .creators-grid {
-                #creators-desc {
-                    h1 { "CREATORS" }
-                }
+            h1 { "CREATORS" }
+            .creators-grid-top {
+                div { }
                 .card .caution-border {
                     h1 { "David Giraldo" }
                     img src="https://avatars.githubusercontent.com/u/147272329";
@@ -115,6 +114,9 @@ fn creators() -> Markup {
                     }
                     a href="https://github.com/sasoder" target="_blank" { "GitHub" }
                 }
+            div { }
+            }
+            .creators-grid-bot {
                 .card .caution-border {
                     h1 { "NooN" }
                     img src="https://avatars.githubusercontent.com/u/14049705";
@@ -216,9 +218,18 @@ fn roadmap() -> Markup {
     }
 }
 
+fn note() -> Markup {
+    html! {
+        #note .banner {
+            strong { "NOTE: Lost to Time was created as a student project at KTH and is no longer being worked on." }
+        }
+    }
+}
+
 fn content() -> Markup {
     html! {
         (hero())
+        (note())
         (creators())
         (art())
         (tech())

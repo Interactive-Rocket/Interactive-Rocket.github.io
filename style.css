@@ -26,7 +26,8 @@ body {
     image-rendering: pixelated;
 }
 
-img {
+p {
+    font-family: sans-serif;
 }
 
 .caution-border {
@@ -58,11 +59,17 @@ iframe {
     height: 100%;
 }
 
-.creators-grid {
+.creators-grid-top {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr 2fr 1fr;
     gap: 10px;
+}
+
+.creators-grid-bot {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 10px;
 }
 
 #creators-desc {
@@ -72,6 +79,12 @@ iframe {
     justify-content: center;
     align-items: center;
     background: #ffffff30;
+}
+
+#note {
+    background: black;
+    color: white;
+    padding: 10px 0;
 }
 
 nav ul {
@@ -126,7 +139,7 @@ header {
 header img {
     object-fit: contain;
     height: 125px;
-    width: 100%;
+    width: 90%;
 }
 
 #hero a {
