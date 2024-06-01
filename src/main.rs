@@ -93,7 +93,7 @@ fn creators() -> Markup {
                     ul { 
                         li { "LEAN development" }
                         li { "Diegetic UI" }
-                        li { "Targeted rewind" }
+                        li { "Rewind prototyping" }
                         li { "Git flow" }
                         li { "Level design" }
                         li { "." } //lazy fix for aligment issue (pad all cards to equal number of
@@ -107,7 +107,7 @@ fn creators() -> Markup {
                     ul {
                         li { "Game concept" }
                         li { "Sound design" }
-                        li { "Object selection logic" }
+                        li { "Rewind logic" }
                         li { "Visual effects" }
                         li { "Trailer & logo" }
                         li { "Level concepts" }
